@@ -1,0 +1,4 @@
+Flask==0.11
+flask-script==0.4.0
+mongoengine==0.8.7
+flask_mongoengine==0.7
