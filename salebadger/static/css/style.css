@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@font-face{font-family:'FontAwesome';src:url('../font/fontawesome-webfont.eot?v=4.0.1');src:url('../font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('../font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('../font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('../font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
 
 /*
 	Overflow 1.1 by HTML5 UP
@@ -14,7 +14,7 @@
 
 	body
 	{
-		background: #183026 url('../../images/bg.jpg') no-repeat;
+		background: #183026 url('../images/bg.jpg') no-repeat;
 		background-size: cover;
 		background-position: center 0;
 		background-attachment: fixed;
@@ -316,7 +316,6 @@
 				margin: 0 0 0.5em 0;
 			}
 		
-			form input.button,
 			form input.text,
 			form select,
 			form textarea
@@ -532,7 +531,7 @@
 				top: -4.5em;
 				margin-left: -45px;
 				margin-top: -33px;
-				background: url('../images/arrow.svg') no-repeat;
+				background: url('images/arrow.svg') no-repeat;
 			}
 		
 			.box :last-child
@@ -1193,7 +1192,7 @@
 				bottom: -4.5em;
 				margin-left: -45px;
 				margin-bottom: -33px;
-				background: url('../images/arrow.svg') no-repeat;
+				background: url('images/arrow.svg') no-repeat;
 			}
 	
 /*********************************************************************************/
@@ -1206,7 +1205,7 @@
 		color: #fff;
 		text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
 		text-align: center;
-		background: #35b88f url('../images/banner.svg') bottom center no-repeat;
+		background: #35b88f url('images/banner.svg') bottom center no-repeat;
 		padding: 5em 0 5em 0;
 		margin: 0;
 		background-size: 125% auto;
@@ -1323,7 +1322,7 @@
 		{
 			width: 48px;
 			height: 48px;
-			background: url('../images/loader.gif');
+			background: url('images/loader.gif');
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -1369,7 +1368,7 @@
 				position: absolute;
 				width: 96px;
 				height: 64px;
-				background: url('../images/poptrox-nav.svg');
+				background: url('images/poptrox-nav.svg');
 				top: -moz-calc(50% - 1.5em);
 				top: -webkit-calc(50% - 1.5em);
 				top: -o-calc(50% - 1.5em);
@@ -1450,7 +1449,7 @@
 				height: 40px;
 				border-radius: 100%;
 				box-shadow: inset 0 0 0 1px #fff;
-				background: rgba(255,255,255,0.1) url('../images/poptrox-closer.svg') center center;
+				background: rgba(255,255,255,0.1) url('images/poptrox-closer.svg') center center;
 				color: #fff !important;
 				-moz-transition: background-color 0.5s ease-in-out;
 				-webkit-transition: background-color 0.5s ease-in-out;

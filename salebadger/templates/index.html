@@ -95,21 +95,41 @@
 			</article>
 		
 		<!-- Contact -->
-			<article class="container box style3">
+			<article class="container box style3" id="subscription">
 				<header>
 					<h2>Subscribe</h2>
 					<p>Subscribe your email address for more information about the product.</p>
 				</header>
-				<form>
+				<form action="#subscription" method="post">
+					{{ form.hidden_tag() }}
 					<div class="row">
-						<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
-						<div class="6u"><input type="text" class="text" name="email" placeholder="Email address" /></div>
+						<div class="6u">
+							{{ form.name(placeholder="Full Name", class_="text") }}
+							{% for error in form.errors.name %}
+					        	<span style="color: red;">
+					        		[{{error}}]
+					        	</span>
+					        {% endfor %}
+						</div>
+						<div class="6u">
+							{{ form.email(placeholder="Email address", class_="text") }}
+							{% for error in form.errors.email %}
+					        	<span style="color: red;">
+					        		[{{error}}]
+					        	</span>
+					        {% endfor %}
+						</div>
 					</div>
-					</div>
+					
 					<div class="row">
 						<div class="12u">
 							<ul class="actions">
-								<li><a href="#" class="button form">Subscribe</a></li>
+								<li><input type="submit" class="button form" value="Subscribe" /></li>
+								{% for message in get_flashed_messages() %}
+								    <span style="display: block; margin-top: 1em; color: green;">
+								    	{{ message }}
+								    </span>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>
