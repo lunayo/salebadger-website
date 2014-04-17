@@ -1,10 +1,11 @@
-from flask import Blueprint, request, render_template, flash, redirect
+from flask import Blueprint, request, render_template, flash
 from flask.views import MethodView
 from salebadger.models import Subscriber
 from salebadger.forms import SubscriberForm
 import pygeoip
 
 defaults = Blueprint('defaults', __name__, template_folder='templates')
+
 
 class IndexView(MethodView):
 
@@ -28,7 +29,6 @@ class IndexView(MethodView):
             cityRecord = gic.record_by_addr(request.remote_addr)
             if cityRecord is not None and cityRecord['city']:
                 subscriber.city = cityRecord['city']
-            
             subscriber.save()
 
             flash('Thank you for your subscription.')

@@ -1,17 +1,12 @@
 # Set the path
-import os, sys
+import os
+import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from flask.ext.script import Manager, Server
+from gevent.wsgi import WSGIServer
 from salebadger import app
 
-manager = Manager(app)
-
-manager.add_command("runserver", Server(
-    use_debugger = True,
-    use_reloader = True,
-    host = '0.0.0.0')
-)
+http_server = WSGIServer(('', 80), app)
 
 if __name__ == "__main__":
-    manager.run()
+    http_server.serve_forever()
